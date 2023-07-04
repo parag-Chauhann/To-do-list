@@ -1,6 +1,5 @@
 
-// import Todo from "./ToDoList";
-import TodoListApp from "./ToDoList1";
+import TodoListApp from "./ToDoList";
 
 function App() {
   return (
