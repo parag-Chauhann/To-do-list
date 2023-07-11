@@ -29,7 +29,6 @@ const TodoList = () => {
     })
       .then(response => response.json())
       .then(data => {
-        console.log('Created todo item:', data);
         setItems([data, ...items]);
         resetForm();
       })
@@ -48,7 +47,6 @@ const TodoList = () => {
     })
       .then(response => response.json())
       .then(data => {
-        console.log('Updated todo item:', data);
         const updatedItems = items.map(elem =>
           elem.id === item.id ? data : elem
         );
@@ -65,7 +63,6 @@ const TodoList = () => {
       method: 'DELETE',
     })
       .then(() => {
-        console.log('Deleted todo item with ID:', id);
         const updatedItems = items.filter(item => item.id !== id);
         setItems(updatedItems);
       })
